@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F7D52204-0991-460E-8F56-8CDF81D08F05}</ProjectGuid>
+    <ProjectGuid>{666B7BE8-2118-469F-82F8-CB87E2889B1F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GameLib</RootNamespace>
-    <AssemblyName>GameLib</AssemblyName>
+    <RootNamespace>SQLitCodeLib</RootNamespace>
+    <AssemblyName>SQLitCodeLib</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,49 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\Assets\Plugins\CommNet\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="NetworkCommsDotNet">
-      <HintPath>..\Assets\Plugins\CommNet\NetworkCommsDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\Assets\Plugins\Json\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="protobuf-net">
-      <HintPath>..\Assets\Plugins\CommNet\protobuf-net.dll</HintPath>
-    </Reference>
-    <Reference Include="ProtobufSerializer">
-      <HintPath>..\Assets\Plugins\CommNet\ProtobufSerializer.dll</HintPath>
-    </Reference>
-    <Reference Include="QuickLZCompressor">
-      <HintPath>..\Assets\Plugins\CommNet\QuickLZCompressor.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpZipLibCompressor">
-      <HintPath>..\Assets\Plugins\CommNet\SharpZipLibCompressor.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="UnityEditor">
-      <HintPath>..\ReferenceLib\UnityEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>..\ReferenceLib\UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>..\ReferenceLib\UnityEngine.UI.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>echo ON
-copy /Y "$(TargetDir)$(ProjectName)*" "$(SolutionDir)..\Assets\$(ProjectName)\"</PostBuildEvent>
-  </PropertyGroup>
 </Project>
